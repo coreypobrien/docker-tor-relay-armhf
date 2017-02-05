@@ -17,6 +17,6 @@ WORKDIR /var/lib/tor
 VOLUME /var/lib/tor
 
 ADD run.sh /var/lib/tor
-CMD run.sh
+ENTRYPOINT "/var/lib/tor/run.sh"
 
 RUN [ "cross-build-end" ]  
